@@ -136,12 +136,20 @@
                                 <rect key="frame" x="37" y="567" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="r73-nv-U1Y">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="k2y-GJ-dbY">
+                                <rect key="frame" x="37" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="r73-nv-U1Y">
                                 <rect key="frame" x="147" y="567" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-Fg-8ut">
                                 <rect key="frame" x="183" y="116" width="9.5" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-fQ-frO">
+                                <rect key="frame" x="257" y="567" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
