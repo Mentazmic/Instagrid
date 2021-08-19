@@ -68,8 +68,8 @@
 		<string>ThirstySoftRegular.otf</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>We need to see photos in your gallery.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
+	<string>We need to write photos in your gallery.</string>
 </dict>
 </plist>
