@@ -55,18 +55,29 @@ class ViewController: UIViewController {
         present(vc, animated: true)
     }
     
-    @objc func importPicture() {
-        let picker = UIImagePickerController()
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+//    @objc func importPicture() {
+//        let picker = UIImagePickerController()
+//        picker.allowsEditing = true
+//        picker.delegate = self
+//        present(picker, animated: true)
+//    }
+    
+    @IBAction func swipeUpToShare(_ sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            print("Swipe Up")
+            let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+            vc.popoverPresentationController?.sourceView = self.view
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
-    @IBAction func swipeToShare(_ sender: UISwipeGestureRecognizer) {
-        let items = [URL(string: "https://www.apple.com")!]
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        present(ac, animated: true)
-        print("Swipe")
+    @IBAction func swipeLeftToShare(_ sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            print("Swipe Left")
+            let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+            vc.popoverPresentationController?.sourceView = self.view
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 //MARK: -Extension
