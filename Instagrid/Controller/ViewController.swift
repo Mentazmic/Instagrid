@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(layoutSelect(_:)))
         layoutView?.addGestureRecognizer(tapGesture)
+        
     }
     
     @IBAction func didTapLayoutButton1() {
@@ -42,6 +43,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swipeToShare(_ sender: UISwipeGestureRecognizer) {
-        
+        let items = [URL(string: "https://www.apple.com")!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+        print("Swipe")
     }
 }
