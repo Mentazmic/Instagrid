@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,21 +21,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-EW-wld">
-                                <rect key="frame" x="94.5" y="181" width="9.5" height="13.5"/>
+                                <rect key="frame" x="138.5" y="190" width="9.5" height="13.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eH-qc-olM">
-                                <rect key="frame" x="20" y="206.5" width="158" height="27"/>
+                                <rect key="frame" x="64" y="215.5" width="158" height="27"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="R2w-fU-4Yh" appends="YES" id="ghP-k5-WPc"/>
-                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hrJ-l8-1Gq">
                                 <rect key="frame" x="14" y="273" width="148" height="27"/>
@@ -46,20 +43,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-Fg-8ut">
-                                <rect key="frame" x="181" y="99" width="13.5" height="9.5"/>
+                                <rect key="frame" x="200.5" y="219.5" width="13.5" height="9.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHS-68-djb">
-                                <rect key="frame" x="0.0" y="120.5" width="375" height="28"/>
+                                <rect key="frame" x="0.0" y="241" width="414" height="27"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="WV2-pI-EIc" appends="YES" id="6zY-bH-yHR"/>
-                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bap-i0-pho">
-                                <rect key="frame" x="10" y="0.0" width="355" height="39"/>
+                                <rect key="frame" x="94" y="0.0" width="708.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="nZd-5r-Jif"/>
                                 </constraints>
@@ -68,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-N5-Sgg" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <rect key="frame" x="291" y="59" width="314" height="314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-kc-5pB">
                                         <rect key="frame" x="15" y="15" width="270" height="127.5"/>
@@ -196,7 +190,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="xKR-lU-U63">
-                                <rect key="frame" x="29.5" y="567" width="316" height="80"/>
+                                <rect key="frame" x="752" y="59" width="80" height="314"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-gJ-eMW">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -231,7 +225,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff5-IZ-05K">
-                                        <rect key="frame" x="118" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="117" width="80" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="Or0-Kq-nuI">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -263,7 +257,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwZ-Eo-koa">
-                                        <rect key="frame" x="236" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="234" width="80" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-d4-aqa">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -450,6 +444,9 @@
                                 <exclude reference="LdP-rR-NDm"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WV2-pI-EIc" appends="YES" id="A8u-Wo-f20"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="layoutButton1" destination="WRS-cm-fa6" id="7ES-e9-6gj"/>
@@ -479,11 +476,6 @@
                         <action selector="didTapLayoutImage1" destination="BYZ-38-t0r" id="j53-ZA-8Eh"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="R2w-fU-4Yh">
-                    <connections>
-                        <action selector="swipeLeftToShare:" destination="BYZ-38-t0r" id="nUb-uP-4qK"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="WV2-pI-EIc">
                     <connections>
                         <action selector="swipeUpToShare:" destination="BYZ-38-t0r" id="Zux-2g-P49"/>

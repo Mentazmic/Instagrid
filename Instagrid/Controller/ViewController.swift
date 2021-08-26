@@ -61,22 +61,26 @@ class ViewController: UIViewController {
 //        picker.delegate = self
 //        present(picker, animated: true)
 //    }
-    
+
     @IBAction func swipeUpToShare(_ sender: UISwipeGestureRecognizer) {
-        if sender.state == .ended {
-            print("Swipe Up")
-            let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
-            vc.popoverPresentationController?.sourceView = self.view
-            self.present(vc, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func swipeLeftToShare(_ sender: UISwipeGestureRecognizer) {
-        if sender.state == .ended {
-            print("Swipe Left")
-            let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
-            vc.popoverPresentationController?.sourceView = self.view
-            self.present(vc, animated: true, completion: nil)
+        if UIDevice.current.orientation.isPortrait {
+            let gesture = UISwipeGestureRecognizer()
+            gesture.direction = .up
+            if sender.state == .ended {
+                print("Swipe Up")
+                let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+                vc.popoverPresentationController?.sourceView = self.view
+                self.present(vc, animated: true, completion: nil)
+            }
+        } else if UIDevice.current.orientation.isLandscape {
+            let gesture = UISwipeGestureRecognizer()
+            gesture.direction = .left
+            if sender.state == .ended {
+                print("Swipe Left")
+                let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+                vc.popoverPresentationController?.sourceView = self.view
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
 }
