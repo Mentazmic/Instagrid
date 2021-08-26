@@ -7,8 +7,8 @@
 
 import UIKit
 
-class layoutView: UIView {
-    
+class LayoutView: UIView {
+    //MARK: -Properties
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
@@ -18,6 +18,7 @@ class layoutView: UIView {
     @IBOutlet weak var selectedLayout2: UIImageView!
     @IBOutlet weak var selectedLayout3: UIImageView!
     
+    //MARK: -Style
     enum Style {
         case layout1, layout2, layout3
     }
@@ -32,10 +33,10 @@ class layoutView: UIView {
     private func setStyle (_ style: Style) {
         switch style {
         case.layout1:
-            image1.image = #imageLiteral(resourceName: "Plus")
-            image2.image = #imageLiteral(resourceName: "Plus")
-            image3.image = #imageLiteral(resourceName: "Plus")
-            image4.image = #imageLiteral(resourceName: "Plus")
+//            image1.image = #imageLiteral(resourceName: "Plus")
+//            image2.image = #imageLiteral(resourceName: "Plus")
+//            image3.image = #imageLiteral(resourceName: "Plus")
+//            image4.image = #imageLiteral(resourceName: "Plus")
             image1.isHidden = false
             image2.isHidden = true
             image3.isHidden = false
@@ -44,10 +45,10 @@ class layoutView: UIView {
             selectedLayout2.isHidden = true
             selectedLayout3.isHidden = true
         case.layout2:
-            image1.image = #imageLiteral(resourceName: "Plus")
-            image2.image = #imageLiteral(resourceName: "Plus")
-            image3.image = #imageLiteral(resourceName: "Plus")
-            image4.image = #imageLiteral(resourceName: "Plus")
+//            image1.image = #imageLiteral(resourceName: "Plus")
+//            image2.image = #imageLiteral(resourceName: "Plus")
+//            image3.image = #imageLiteral(resourceName: "Plus")
+//            image4.image = #imageLiteral(resourceName: "Plus")
             image1.isHidden = false
             image2.isHidden = false
             image3.isHidden = false
@@ -56,10 +57,10 @@ class layoutView: UIView {
             selectedLayout2.isHidden = false
             selectedLayout3.isHidden = true
         case.layout3:
-            image1.image = #imageLiteral(resourceName: "Plus")
-            image2.image = #imageLiteral(resourceName: "Plus")
-            image3.image = #imageLiteral(resourceName: "Plus")
-            image4.image = #imageLiteral(resourceName: "Plus")
+//            image1.image = #imageLiteral(resourceName: "Plus")
+//            image2.image = #imageLiteral(resourceName: "Plus")
+//            image3.image = #imageLiteral(resourceName: "Plus")
+//            image4.image = #imageLiteral(resourceName: "Plus")
             image1.isHidden = false
             image2.isHidden = false
             image3.isHidden = false

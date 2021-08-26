@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var layoutButton2: UIButton!
     @IBOutlet weak var layoutButton3: UIButton!
     
-    @IBOutlet weak var layoutView : layoutView!
+    @IBOutlet weak var layoutView : LayoutView!
     
     
     

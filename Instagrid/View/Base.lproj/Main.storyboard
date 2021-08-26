@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-EW-wld">
-                                <rect key="frame" x="90" y="181" width="9.5" height="13.5"/>
+                                <rect key="frame" x="94.5" y="181" width="9.5" height="13.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eH-qc-olM">
                                 <rect key="frame" x="20" y="206.5" width="158" height="27"/>
@@ -46,10 +46,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-Fg-8ut">
-                                <rect key="frame" x="181" y="100" width="13.5" height="9.5"/>
+                                <rect key="frame" x="181" y="99" width="13.5" height="9.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHS-68-djb">
-                                <rect key="frame" x="0.0" y="121.5" width="375" height="27"/>
+                                <rect key="frame" x="0.0" y="120.5" width="375" height="28"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,7 +67,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-N5-Sgg" customClass="layoutView" customModule="Instagrid" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-N5-Sgg" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-kc-5pB">
@@ -271,7 +271,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="Zic-Wi-AyA">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="1EF-53-rPk"/>
+                                                    <constraint firstAttribute="height" priority="998" constant="80" id="1EF-53-rPk"/>
                                                     <constraint firstAttribute="width" constant="80" id="gMs-PV-0Oz"/>
                                                 </constraints>
                                                 <variation key="default">
@@ -373,6 +373,7 @@
                             <constraint firstItem="ZHS-68-djb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gN0-9x-kqL">
                                 <variation key="heightClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="YWG-EW-wld" firstAttribute="centerX" secondItem="1eH-qc-olM" secondAttribute="centerX" id="gd3-s5-0zj"/>
                             <constraint firstItem="YWG-EW-wld" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jg3-pb-BUf"/>
                             <constraint firstItem="ZHS-68-djb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kKt-Tj-PA3"/>
                             <constraint firstItem="Qd2-Fg-8ut" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="l7e-Wu-G2j"/>
