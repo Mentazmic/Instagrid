@@ -42,6 +42,19 @@ class ViewController: UIViewController {
         print("Button 3")
     }
     
+    @IBAction func didTapImage1() {
+        print("Image 1")
+    }
+    @IBAction func didTapImage2() {
+        print("Image 1")
+    }
+    @IBAction func didTapImage3() {
+        print("Image 1")
+    }
+    @IBAction func didTapImage4() {
+        print("Image 1")
+    }
+    
     @IBAction func didTapImageView(_ sender: UITapGestureRecognizer) {
         print("did tap image view", sender)
     }
@@ -62,19 +75,17 @@ class ViewController: UIViewController {
 //        present(picker, animated: true)
 //    }
 
-    @IBAction func swipeUpToShare(_ sender: UISwipeGestureRecognizer) {
-        if UIDevice.current.orientation.isPortrait {
-            let gesture = UISwipeGestureRecognizer()
-            gesture.direction = .up
+    @IBAction func swipeToShare(_ sender: UISwipeGestureRecognizer) {
+        let gesture = UISwipeGestureRecognizer()
+
+        if UIDevice.current.orientation.isPortrait && gesture.direction == .up {
             if sender.state == .ended {
                 print("Swipe Up")
                 let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
                 vc.popoverPresentationController?.sourceView = self.view
                 self.present(vc, animated: true, completion: nil)
             }
-        } else if UIDevice.current.orientation.isLandscape {
-            let gesture = UISwipeGestureRecognizer()
-            gesture.direction = .left
+        } else if UIDevice.current.orientation.isLandscape && gesture.direction == .left{
             if sender.state == .ended {
                 print("Swipe Left")
                 let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
