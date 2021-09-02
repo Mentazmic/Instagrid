@@ -70,5 +70,27 @@ class LayoutView: UIView {
             selectedLayout3.isHidden = false
         }
     }
+    //MARK: -Selected Image
+    enum SelectedImage {
+        case image1, image2, image3, image4
+    }
     
+    var selectedImage: SelectedImage = .image1{
+        didSet {
+            setSelection(selectedImage)
+        }
+    }
+    
+    private func setSelection (_ selectedImage: SelectedImage) {
+        switch selectedImage {
+        case .image1:
+            break
+        case .image2:
+            break
+        case .image3:
+            break
+        case .image4:
+            break
+        }
+    }
 }

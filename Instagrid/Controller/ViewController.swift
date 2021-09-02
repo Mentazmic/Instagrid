@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var layoutButton3: UIButton!
     
     @IBOutlet weak var layoutView : LayoutView!
-    
-    
-    
+
     @IBOutlet weak var swipe: UIButton!
+    
+    private var buttonSelect: Int = 0
     
     //MARK: -viewDidLoad
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapLayoutImage1))
         layoutView?.addGestureRecognizer(imageTapGesture)
-
+        
     }
     
     //MARK: -Actions
@@ -42,53 +42,41 @@ class ViewController: UIViewController {
         print("Button 3")
     }
     
-    @IBAction func didTapImage1() {
-        print("Image 1")
-    }
-    @IBAction func didTapImage2() {
-        print("Image 1")
-    }
-    @IBAction func didTapImage3() {
-        print("Image 1")
-    }
-    @IBAction func didTapImage4() {
-        print("Image 1")
-    }
-    
     @IBAction func didTapImageView(_ sender: UITapGestureRecognizer) {
         print("did tap image view", sender)
     }
     
-    @IBAction func didTapLayoutImage1() {
-        print("Button Pressed")
+    @IBAction func didTapLayoutImage1(_ sender: UITapGestureRecognizer) {
+        print("Button Pressed", sender)
+        buttonSelect = sender.view?.tag ?? 1
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
     }
-    
-//    @objc func importPicture() {
-//        let picker = UIImagePickerController()
-//        picker.allowsEditing = true
-//        picker.delegate = self
-//        present(picker, animated: true)
-//    }
 
     @IBAction func swipeToShare(_ sender: UISwipeGestureRecognizer) {
-        let gesture = UISwipeGestureRecognizer()
-
-        if UIDevice.current.orientation.isPortrait && gesture.direction == .up {
+        
+        if UIDevice.current.orientation.isPortrait && sender.direction == .up{
             if sender.state == .ended {
                 print("Swipe Up")
-                let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+                let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
+                let image = renderer.image { ctx in
+                    layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+                }
+                let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
                 vc.popoverPresentationController?.sourceView = self.view
                 self.present(vc, animated: true, completion: nil)
             }
-        } else if UIDevice.current.orientation.isLandscape && gesture.direction == .left{
-            if sender.state == .ended {
+        } else if UIDevice.current.orientation.isLandscape && sender.direction == .left {
+            if sender.state == .ended{
                 print("Swipe Left")
-                let vc = UIActivityViewController(activityItems: ["Share your picture"], applicationActivities: nil)
+                let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
+                let image = renderer.image { ctx in
+                    layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+                }
+                let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
                 vc.popoverPresentationController?.sourceView = self.view
                 self.present(vc, animated: true, completion: nil)
             }
@@ -101,7 +89,21 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         
         print("\(info)")
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")]as? UIImage{
-            layoutView.image1.image = image
+            //layoutView.image1.image = image
+            
+                        let selection = buttonSelect
+                        switch selection {
+                        case 1:
+                            layoutView.image1.image = image
+                        case 2:
+                            layoutView.image2.image = image
+                        case 3:
+                            layoutView.image3.image = image
+                        case 4:
+                            layoutView.image4.image = image
+                        default:
+                            break
+                        }
         }
         
         picker.dismiss(animated: true, completion: nil)
