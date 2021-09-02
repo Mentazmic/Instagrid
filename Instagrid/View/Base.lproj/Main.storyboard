@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,7 +21,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-EW-wld">
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bap-i0-pho">
-                                <rect key="frame" x="94" y="0.0" width="708.66666666666663" height="39"/>
+                                <rect key="frame" x="10" y="44" width="394" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="nZd-5r-Jif"/>
                                 </constraints>
@@ -62,25 +62,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-N5-Sgg" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="291" y="59" width="314" height="314"/>
+                                <rect key="frame" x="57" y="303" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="H5p-3S-Hhe">
-                                        <rect key="frame" x="15" y="15" width="284" height="284"/>
+                                        <rect key="frame" x="15" y="15" width="270" height="270"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-kc-5pB">
-                                                <rect key="frame" x="0.0" y="0.0" width="284" height="134.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="127.66666666666667"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-8t-FRX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="134.66666666666666"/>
-                                                        <color key="backgroundColor" red="0.38823529410000002" green="0.3803921569" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <imageView clipsSubviews="YES" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-8t-FRX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="127.66666666666667"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="gOc-Pp-hhb" appends="YES" id="3fB-TN-Qih"/>
                                                         </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBp-mO-gJB">
-                                                        <rect key="frame" x="149.66666666666669" y="0.0" width="134.33333333333331" height="134.66666666666666"/>
-                                                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <imageView clipsSubviews="YES" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="gBp-mO-gJB">
+                                                        <rect key="frame" x="142.66666666666666" y="0.0" width="127.33333333333334" height="127.66666666666667"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="uAh-85-hql" appends="YES" id="jWY-Cf-cnJ"/>
@@ -93,6 +93,7 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="eZu-gK-7sg"/>
                                                         <exclude reference="jTD-ww-LD2"/>
                                                     </mask>
                                                 </variation>
@@ -104,19 +105,19 @@
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-Xt-0dI">
-                                                <rect key="frame" x="0.0" y="149.66666666666663" width="284" height="134.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="142.66666666666669" width="270" height="127.33333333333331"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uz5-1t-6rC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="134.33333333333334"/>
-                                                        <color key="backgroundColor" red="0.84705882349999995" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <imageView clipsSubviews="YES" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Uz5-1t-6rC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="127.33333333333333"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="Y2L-Up-acI" appends="YES" id="6sl-SF-zN7"/>
                                                         </connections>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-TU-eia">
-                                                        <rect key="frame" x="149.66666666666669" y="0.0" width="134.33333333333331" height="134.33333333333334"/>
-                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <imageView clipsSubviews="YES" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-TU-eia">
+                                                        <rect key="frame" x="142.66666666666666" y="0.0" width="127.33333333333334" height="127.33333333333333"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="gb9-LZ-XV9" appends="YES" id="dVc-HK-eEp"/>
@@ -129,6 +130,7 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="eBL-IH-qM6"/>
                                                         <exclude reference="nGV-jp-8zH"/>
                                                     </mask>
                                                 </variation>
@@ -182,7 +184,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="xKR-lU-U63">
-                                <rect key="frame" x="752" y="59" width="80" height="314"/>
+                                <rect key="frame" x="49" y="762" width="316" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-gJ-eMW">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -217,7 +219,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff5-IZ-05K">
-                                        <rect key="frame" x="0.0" y="117" width="80" height="80"/>
+                                        <rect key="frame" x="118" y="0.0" width="80" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="Or0-Kq-nuI">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -249,7 +251,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwZ-Eo-koa">
-                                        <rect key="frame" x="0.0" y="234" width="80" height="80"/>
+                                        <rect key="frame" x="236" y="0.0" width="80" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="cMq-d4-aqa">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -454,22 +456,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="gOc-Pp-hhb">
                     <connections>
-                        <action selector="didTapLayoutImage1:" destination="BYZ-38-t0r" id="2YW-yi-lIR"/>
+                        <action selector="didTapLayoutImage:" destination="BYZ-38-t0r" id="2YW-yi-lIR"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="uAh-85-hql">
                     <connections>
-                        <action selector="didTapLayoutImage1:" destination="BYZ-38-t0r" id="L7e-Vs-res"/>
+                        <action selector="didTapLayoutImage:" destination="BYZ-38-t0r" id="L7e-Vs-res"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Y2L-Up-acI">
                     <connections>
-                        <action selector="didTapLayoutImage1:" destination="BYZ-38-t0r" id="Qrh-Ih-9ZO"/>
+                        <action selector="didTapLayoutImage:" destination="BYZ-38-t0r" id="Qrh-Ih-9ZO"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="gb9-LZ-XV9">
                     <connections>
-                        <action selector="didTapLayoutImage1:" destination="BYZ-38-t0r" id="oKX-Ui-DRc"/>
+                        <action selector="didTapLayoutImage:" destination="BYZ-38-t0r" id="oKX-Ui-DRc"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="WV2-pI-EIc">
@@ -492,12 +494,10 @@
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
+        <image name="Plus" width="40" height="40"/>
         <image name="Selected" width="80" height="80"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
