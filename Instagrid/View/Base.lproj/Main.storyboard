@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,14 +21,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-EW-wld">
-                                <rect key="frame" x="138.33333333333334" y="190" width="9.6666666666666572" height="13.333333333333343"/>
+                                <rect key="frame" x="94.5" y="153.5" width="9.5" height="13.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eH-qc-olM">
-                                <rect key="frame" x="64" y="215.33333333333334" width="158" height="26.666666666666657"/>
+                                <rect key="frame" x="20" y="179" width="158" height="27"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,17 +43,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-Fg-8ut">
-                                <rect key="frame" x="200.33333333333334" y="219.66666666666666" width="13.333333333333343" height="9.6666666666666572"/>
+                                <rect key="frame" x="181" y="119.5" width="13.5" height="9.5"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHS-68-djb">
-                                <rect key="frame" x="0.0" y="241.33333333333334" width="414" height="26.666666666666657"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="27"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bap-i0-pho">
-                                <rect key="frame" x="10" y="44" width="394" height="39"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="nZd-5r-Jif"/>
                                 </constraints>
@@ -62,16 +62,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-N5-Sgg" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="57" y="303" width="300" height="300"/>
+                                <rect key="frame" x="57" y="203" width="261" height="261"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="H5p-3S-Hhe">
-                                        <rect key="frame" x="15" y="15" width="270" height="270"/>
+                                        <rect key="frame" x="15" y="15" width="231" height="231"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-kc-5pB">
-                                                <rect key="frame" x="0.0" y="0.0" width="270" height="127.66666666666667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="108"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-8t-FRX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="127.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
@@ -79,7 +79,7 @@
                                                         </connections>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="gBp-mO-gJB">
-                                                        <rect key="frame" x="142.66666666666666" y="0.0" width="127.33333333333334" height="127.66666666666667"/>
+                                                        <rect key="frame" x="123" y="0.0" width="108" height="108"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
@@ -105,10 +105,10 @@
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-Xt-0dI">
-                                                <rect key="frame" x="0.0" y="142.66666666666669" width="270" height="127.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="123" width="231" height="108"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Uz5-1t-6rC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="127.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
@@ -116,7 +116,7 @@
                                                         </connections>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-TU-eia">
-                                                        <rect key="frame" x="142.66666666666666" y="0.0" width="127.33333333333334" height="127.33333333333333"/>
+                                                        <rect key="frame" x="123" y="0.0" width="108" height="108"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <connections>
@@ -184,7 +184,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="xKR-lU-U63">
-                                <rect key="frame" x="49" y="762" width="316" height="80"/>
+                                <rect key="frame" x="29.5" y="567" width="316" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-gJ-eMW">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -489,8 +489,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="9.6666669845581055" height="13.333333015441895"/>
-        <image name="Arrow Up" width="13.333333015441895" height="9.6666669845581055"/>
+        <image name="Arrow Left" width="9.5" height="13.5"/>
+        <image name="Arrow Up" width="13.5" height="9.5"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>

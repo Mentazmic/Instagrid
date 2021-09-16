@@ -32,22 +32,22 @@ class ViewController: UIViewController {
     //MARK: -Actions
     
     //Layout Button 1 action
-    @IBAction func didTapLayoutButton1() {
+    @IBAction private func didTapLayoutButton1() {
         layoutView.style = .layout1
     }
     
     //Layout Button 2 action
-    @IBAction func didTapLayoutButton2() {
+    @IBAction private func didTapLayoutButton2() {
         layoutView.style = .layout2
     }
     
     //Layout Button 3 action
-    @IBAction func didTapLayoutButton3() {
+    @IBAction private func didTapLayoutButton3() {
         layoutView.style = .layout3
     }
     
     //Opens the gallery to choose a picture to load into the selected slot
-    @IBAction func didTapLayoutImage(_ sender: UITapGestureRecognizer) {
+    @IBAction private func didTapLayoutImage(_ sender: UITapGestureRecognizer) {
         //Changes the buttonSelect value to the tag of the view that sends the tap
         buttonSelect = sender.view?.tag ?? 1
         let vc = UIImagePickerController()
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
     
     //Enables user to swipe and share the final image, converts the view into an image
-    @IBAction func swipeToShare(_ sender: UISwipeGestureRecognizer) {
+    @IBAction private func swipeToShare(_ sender: UISwipeGestureRecognizer) {
         
         if sender.state == .ended {
             if UIDevice.current.orientation.isPortrait && sender.direction == .up || UIDevice.current.orientation.isLandscape && sender.direction == .left {
