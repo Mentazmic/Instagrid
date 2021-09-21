@@ -18,30 +18,28 @@ class ViewController: UIViewController {
     //References LayoutView
     @IBOutlet weak var layoutView : LayoutView!
     
+    //Portrait & Landscape labels
+    @IBOutlet weak var portraitLabel: UIStackView!
+    @IBOutlet weak var landscapeLabel: UIStackView!
+    
+    
     @IBOutlet weak var swipe: UIButton!
-    
-    //Portrait Label
-    @IBOutlet weak var arrowUp: UIImageView!
-    @IBOutlet weak var swipeUpToShare: UILabel!
-    
-    //Landscape Label
-    @IBOutlet weak var arrowLeft: UIImageView!
-    @IBOutlet weak var swipeLeftToShare: UILabel!
-    
     
     //Used to check which button has been pressed
     private var buttonSelect: Int = 0
     
     func fadeOut() {
         if UIDevice.current.orientation.isPortrait {
-            swipeUpToShare.isHidden = true
-            arrowUp.isHidden = true
+            self.portraitLabel.animate (withDuration: 1, animations: {
+                self.layoutView.transform = CGAffineTransform(translationX: 0, y: -1200)
+            }, completion: nil)
             LayoutView.animate (withDuration: 1, animations: {
                 self.layoutView.transform = CGAffineTransform(translationX: 0, y: -1200)
             }, completion: nil)
         } else if UIDevice.current.orientation.isLandscape {
-            swipeLeftToShare.isHidden = true
-            arrowLeft.isHidden = true
+            UIStackView.animate (withDuration: 1, animations: {
+                self.layoutView.transform = CGAffineTransform(translationX: -1200, y: 0)
+            }, completion: nil)
             LayoutView.animate (withDuration: 1, animations: {
                 self.layoutView.transform = CGAffineTransform(translationX: -1200, y: 0)
             }, completion: nil)
@@ -49,13 +47,6 @@ class ViewController: UIViewController {
     }
     
     func fadeIn() {
-        if UIDevice.current.orientation.isPortrait {
-            swipeUpToShare.isHidden = false
-            arrowUp.isHidden = false
-        } else if UIDevice.current.orientation.isLandscape {
-            swipeLeftToShare.isHidden = false
-            arrowLeft.isHidden = false
-        }
         LayoutView.animate (withDuration: 0.5, animations: {
             self.layoutView.transform = .identity
         }, completion: nil)
