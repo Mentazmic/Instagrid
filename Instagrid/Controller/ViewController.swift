@@ -20,13 +20,52 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var swipe: UIButton!
     
+    //Portrait Label
+    @IBOutlet weak var arrowUp: UIImageView!
+    @IBOutlet weak var swipeUpToShare: UILabel!
+    
+    //Landscape Label
+    @IBOutlet weak var arrowLeft: UIImageView!
+    @IBOutlet weak var swipeLeftToShare: UILabel!
+    
+    
     //Used to check which button has been pressed
     private var buttonSelect: Int = 0
+    
+    func fadeOut() {
+        if UIDevice.current.orientation.isPortrait {
+            swipeUpToShare.isHidden = true
+            arrowUp.isHidden = true
+            LayoutView.animate (withDuration: 1, animations: {
+                self.layoutView.transform = CGAffineTransform(translationX: 0, y: -1200)
+            }, completion: nil)
+        } else if UIDevice.current.orientation.isLandscape {
+            swipeLeftToShare.isHidden = true
+            arrowLeft.isHidden = true
+            LayoutView.animate (withDuration: 1, animations: {
+                self.layoutView.transform = CGAffineTransform(translationX: -1200, y: 0)
+            }, completion: nil)
+        }
+    }
+    
+    func fadeIn() {
+        if UIDevice.current.orientation.isPortrait {
+            swipeUpToShare.isHidden = false
+            arrowUp.isHidden = false
+        } else if UIDevice.current.orientation.isLandscape {
+            swipeLeftToShare.isHidden = false
+            arrowLeft.isHidden = false
+        }
+        LayoutView.animate (withDuration: 0.5, animations: {
+            self.layoutView.transform = .identity
+        }, completion: nil)
+    }
+    
     
     //MARK: -viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
     
     //MARK: -Actions
@@ -61,6 +100,7 @@ class ViewController: UIViewController {
     @IBAction private func swipeToShare(_ sender: UISwipeGestureRecognizer) {
         
         if sender.state == .ended {
+            fadeOut()
             if UIDevice.current.orientation.isPortrait && sender.direction == .up || UIDevice.current.orientation.isLandscape && sender.direction == .left {
                 let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
                 let image = renderer.image { ctx in
@@ -69,6 +109,10 @@ class ViewController: UIViewController {
                 let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
                 vc.popoverPresentationController?.sourceView = self.view
                 self.present(vc, animated: true, completion: nil)
+                vc.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
+                Bool, arrayReturnedItems: [Any]?, error: Error?) in
+                    self.fadeIn()
+                }
             }
         }
     }

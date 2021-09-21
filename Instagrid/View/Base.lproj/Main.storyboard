@@ -392,13 +392,13 @@
                                 <exclude reference="DgB-af-UuT"/>
                                 <exclude reference="gN0-9x-kqL"/>
                                 <exclude reference="yKj-ac-55Z"/>
-                                <exclude reference="l7e-Wu-G2j"/>
                                 <exclude reference="E0d-r6-oAg"/>
                                 <exclude reference="G3p-1G-3xt"/>
                                 <exclude reference="Ge6-Cl-QB3"/>
                                 <exclude reference="Hvn-K3-m2d"/>
                                 <exclude reference="Ns2-yb-km7"/>
                                 <exclude reference="s8O-lH-RBj"/>
+                                <exclude reference="l7e-Wu-G2j"/>
                                 <exclude reference="JDY-wD-aDe"/>
                             </mask>
                         </variation>
@@ -425,8 +425,6 @@
                                 <exclude reference="kKt-Tj-PA3"/>
                                 <exclude reference="yEq-ZQ-wMe"/>
                                 <exclude reference="yKj-ac-55Z"/>
-                                <exclude reference="Pta-Qx-oiy"/>
-                                <exclude reference="l7e-Wu-G2j"/>
                                 <exclude reference="BjD-0Q-NnF"/>
                                 <exclude reference="E0d-r6-oAg"/>
                                 <include reference="G3p-1G-3xt"/>
@@ -437,6 +435,8 @@
                                 <exclude reference="gxw-7B-NWH"/>
                                 <exclude reference="qjh-cN-fcx"/>
                                 <exclude reference="s8O-lH-RBj"/>
+                                <exclude reference="Pta-Qx-oiy"/>
+                                <exclude reference="l7e-Wu-G2j"/>
                                 <include reference="JDY-wD-aDe"/>
                                 <exclude reference="LdP-rR-NDm"/>
                             </mask>
@@ -447,10 +447,14 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="arrowLeft" destination="YWG-EW-wld" id="nDa-l4-94b"/>
+                        <outlet property="arrowUp" destination="Qd2-Fg-8ut" id="aNf-fF-atb"/>
                         <outlet property="layoutButton1" destination="WRS-cm-fa6" id="7ES-e9-6gj"/>
                         <outlet property="layoutButton2" destination="EFs-zX-Jb9" id="f2C-Jp-s9c"/>
                         <outlet property="layoutButton3" destination="fGh-u7-48f" id="ebY-0h-MJf"/>
                         <outlet property="layoutView" destination="x3L-N5-Sgg" id="v7E-Rd-Uzs"/>
+                        <outlet property="swipeLeftToShare" destination="1eH-qc-olM" id="rF2-1l-pyD"/>
+                        <outlet property="swipeUpToShare" destination="ZHS-68-djb" id="0HN-jD-XLs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
